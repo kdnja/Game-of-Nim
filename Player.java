@@ -1,15 +1,20 @@
+import java.util.Scanner;
+
 public class Player {
     private String name;
     private int score;
 
-    public Player(String name) {
-        this.name = name;
+    public Player() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is your name?");
+        name = sc.nextLine();
+        System.out.println("Welcome to the game of Nim, " + name);
         score = 0;
     }
 
-    public int takeTurn() {
-        // TODO: program this
-        return 0; // placeholder value for now
+    public Player(String name) {
+        this.name = name;
+        score = 0;
     }
 
     public String getName() {
